@@ -1,0 +1,53 @@
+import java.util.Scanner;
+
+class Calculate_BillAmount
+{
+    
+    public static int calculate(int quan, int cost, int disc, int tax)
+    {
+        
+        int itemAmount = quan * cost;
+        
+        int discount = (disc * itemAmount) / 100;
+        
+        int sub_total = itemAmount - discount;
+        
+        int taxAmount = (sub_total * tax) / 100;
+        
+        int total = sub_total + taxAmount;
+        
+        return total;
+        
+    }
+    
+}
+
+class BillAmount
+{
+    
+    public static void main (String[] args) {
+        
+        Scanner sc =  new Scanner(System.in);
+        
+        System.out.println("Enter Quantity of the Solid:");
+        
+        int quantity = sc.nextInt();
+        
+        System.out.println("Enter value of the Solid:");
+        
+        int value = sc.nextInt();
+        
+        System.out.println("Enter discount percentage of the Solid:");
+        
+        int discount_percentage = sc.nextInt();
+        
+        System.out.println("Enter tax percentage of the Solid:");
+        
+        int tax_percentage = sc.nextInt();
+        
+        int billAmount = Calculate_BillAmount.calculate(quantity, value, discount_percentage, tax_percentage);
+        
+        System.out.println("Bill amount of an item: "+billAmount);
+    }
+    
+}

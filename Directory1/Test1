@@ -1,0 +1,24 @@
+class ReverseWordsInAString {
+    public static void main (String[] args) {
+        
+        String st = "Java is easy";
+        String[] st1 = st.split(" ");
+        String newWord = "";
+        String revString= "";
+        for (String i : st1) {
+            System.out.println(i);
+        }
+        
+        int n = st1.length;
+        String newLetter = "";
+        for (int i = 0; i < n; i++) {
+             newWord = st1[i];
+             int l = newWord.length();
+             for (int j = l - 1; j >= 0; j--) {
+                newLetter = newLetter + newWord.charAt(j);
+             }
+        }
+        revString = revString + newLetter + "  ";
+        System.out.println(revString);
+    }
+}

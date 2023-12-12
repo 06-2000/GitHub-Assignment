@@ -1,0 +1,30 @@
+class PiggyBank
+{
+    
+    public static void main (String[] args) {
+        
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("Enter the number of 10 rupee coins:");
+        
+        int ten_rupee_coins = sc.nextInt();
+        
+        System.out.println("Enter the number of 5 rupee coins:");
+        
+        int five_rupee_coins = sc.nextInt();
+        
+        System.out.println("Enter the number of 2 rupee coins:");
+        
+        int two_rupee_coins = sc.nextInt();
+        
+        System.out.println("Enter the number of 1 rupee coins:");
+        
+        int one_rupee_coins = sc.nextInt();
+        
+        int totalamount = TotalNumberOfCoins.totalCoins(ten_rupee_coins, five_rupee_coins, two_rupee_coins, one_rupee_coins);
+        
+        System.out.println("Total amount of money in the piggybank: " +totalamount);
+        
+    }
+    
+}
