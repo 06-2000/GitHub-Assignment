@@ -3,5 +3,11 @@ class RawFile1
     public static void main(String[] args)
     {
         System.out.println("Hello Wold");
+
+        System.out.println("GoodMorning");
+
+        System.out.println("Greetings to you!");
+
+        System.out.println("Congratulation");        
     }
 }
